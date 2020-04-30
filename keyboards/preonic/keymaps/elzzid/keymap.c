@@ -106,10 +106,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_QWERTY] = LAYOUT_preonic_grid( \
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_PSCR, KC_INS,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    \
-  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    UC_MOD,  KC_DEL,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    \
+  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_NLCK, KC_DEL,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    \
   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_GESC, KC_BSPC, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, \
   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_TAB,  KC_ENT , KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, \
-  KC_LEAD, AU_TOG,  TD(A_M), LOWER,   TD(S_M), TD(C_M), TD(G_M), KC_SPC,  RAISE,   ADJUST,  KC_QUOT, KC_BSLS  \
+  KC_CAPS, AU_TOG,  TD(A_M), LOWER,   TD(S_M), TD(C_M), TD(G_M), KC_SPC,  RAISE,   ADJUST,  KC_QUOT, KC_BSLS  \
 ),
 
 /* Colemak
@@ -148,10 +148,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_DVORAK] = LAYOUT_preonic_grid( \
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_PSCR, KC_INS,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    \
-  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    UC_MOD,  KC_DEL,  KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    \
+  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_NLCK, KC_DEL,  KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    \
   KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_GESC, KC_BSPC, KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    \
   KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_TAB,  KC_ENT , KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    \
-  KC_LEAD, AU_TOG,  TD(A_M), LOWER,   TD(S_M), TD(C_M), TD(G_M), KC_SPC,  RAISE,   ADJUST,  KC_QUOT, KC_BSLS  \
+  KC_CAPS, AU_TOG,  TD(A_M), LOWER,   TD(S_M), TD(C_M), TD(G_M), KC_SPC,  RAISE,   ADJUST,  KC_QUOT, KC_BSLS  \
 ),
 
 /* Lower
@@ -168,9 +168,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_preonic_grid( \
-  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    XXXXXXX, XXXXXXX, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    \
-  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    XXXXXXX, XXXXXXX, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    \
-  XXXXXXX, KC_UNDS, KC_MINS, KC_EQL,  KC_PLUS, KC_GRV,  XXXXXXX, KC_DQUO, KC_QUOT, KC_BSLS, KC_PIPE, XXXXXXX, \
+  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   XXXXXXX, XXXXXXX, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  \
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F11,  \
+  XXXXXXX, KC_UNDS, KC_MINS, KC_EQL,  KC_PLUS, KC_GRV,  XXXXXXX, KC_DQUO, KC_QUOT, KC_BSLS, KC_PIPE, KC_F12,  \
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   XXXXXXX, XXXXXXX, KC_RALT, _______, _______, XXXXXXX, _______, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX  \
 ),
@@ -189,9 +189,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_preonic_grid( \
-  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, XXXXXXX, XXXXXXX, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, \
-  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, XXXXXXX, XXXXXXX, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, \
-  KC_PSCR, KC_SLCK, KC_PAUS, KC_LBRC, KC_RBRC, KC_GRV,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, \
+  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   XXXXXXX, XXXXXXX, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  \
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F11,  \
+  CK_TOGG, CK_DOWN, CK_UP,   KC_LBRC, KC_RBRC, KC_GRV,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_F12,  \
   KC_INS,  XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, XXXXXXX, XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX, \
   XXXXXXX, XXXXXXX, KC_RALT, _______, _______, XXXXXXX, _______, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX  \
 ),
@@ -210,11 +210,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_preonic_grid( \
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_NLCK, KC_PSLS, KC_PAST, XXXXXXX, \
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   XXXXXXX, XXXXXXX, KC_NLCK, KC_P7,   KC_P8,   KC_P9,   KC_PPLS, \
-  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  XXXXXXX, XXXXXXX, KC_PSLS, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, \
-  KC_F11,  KC_F12,  CK_TOGG, CK_DOWN, CK_UP,   XXXXXXX, XXXXXXX, KC_PAST, KC_P1,   KC_P2,   KC_P3,   KC_PEQL, \
-  MU_MOD,  MU_TOG,  _______, XXXXXXX, _______, _______, _______, KC_P0,   _______, _______, KC_PDOT, KC_PENT  \
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, KC_NLCK, KC_PSLS, KC_PAST, XXXXXXX, \
+  XXXXXXX, KC_PSCR, KC_SLCK, KC_PAUS, XXXXXXX, XXXXXXX, _______, KC_NLCK, KC_P7,   KC_P8,   KC_P9,   KC_PPLS, \
+  XXXXXXX, KC_INS,  KC_HOME, KC_PGUP, XXXXXXX, XXXXXXX, _______, KC_PSLS, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, \
+  XXXXXXX, KC_DEL,  KC_END,  KC_PGDN, XXXXXXX, XXXXXXX, _______, KC_PAST, KC_P1,   KC_P2,   KC_P3,   KC_PEQL, \
+  MU_TOG,  MU_MOD,  _______, XXXXXXX, _______, _______, _______, KC_P0,   _______, _______, KC_PDOT, KC_PENT  \
 )
 
 

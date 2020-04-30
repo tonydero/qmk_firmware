@@ -56,6 +56,7 @@ enum custom_keycodes {
 //Macros
 #define KC_LOWER  MO(_LOWER)
 #define KC_RAISE  MO(_RAISE)
+#define KC_KPM    MO(_KEYPAD)
 #define KC_RABS   LT(_RAISE,KC_BSPC)
 #define KC_RAEN   LT(_RAISE,KC_ENT)
 #define KC_FF12   LT(_PADFUNC,KC_F12)
@@ -86,10 +87,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_QWERTY] = LAYOUT_kc( \
           1 ,    2 ,    3 ,     4 ,    5 ,  PSCR ,                INS ,   6 ,     7 ,    8 ,    9 ,    0 , \
-          Q ,    W ,    E ,     R ,    T , LOWER ,                DEL ,   Y ,     U ,    I ,    O ,    P , \
+          Q ,    W ,    E ,     R ,    T ,  NLCK ,                DEL ,   Y ,     U ,    I ,    O ,    P , \
           A ,    S ,    D ,     F ,    G ,  GESC ,               BSPC ,   H ,     J ,    K ,    L , SCLN , \
           Z ,    X ,    C ,     V ,    B ,   TAB , MINS ,  EQL ,  ENT ,   N ,     M , COMM ,  DOT , SLSH , \
-      LOWER , CAPS , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE ,  ADJ , QUOT , BSLS \
+       CAPS , XXXX , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE ,  ADJ , QUOT , BSLS \
       ),
 
   /* Colemak
@@ -107,10 +108,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_COLEMAK] = LAYOUT_kc( \
           1 ,    2 ,    3 ,     4 ,    5 ,  PSCR ,                INS ,   6 ,     7 ,    8 ,    9 ,    0 , \
-          Q ,    W ,    F ,     P ,    G , LOWER ,                DEL ,   J ,     L ,    U ,    Y , SCLN , \
+          Q ,    W ,    F ,     P ,    G ,  NLCK ,                DEL ,   J ,     L ,    U ,    Y , SCLN , \
           A ,    R ,    S ,     T ,    D ,  GESC ,               BSPC ,   H ,     N ,    E ,    I ,    O , \
           Z ,    X ,    C ,     V ,    B ,   TAB , MINS ,  EQL ,  ENT ,   K ,     M , COMM ,  DOT , SLSH , \
-      LOWER , CAPS , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE ,  ADJ , QUOT , BSLS \
+       CAPS , XXXX , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE ,  ADJ , QUOT , BSLS \
       ),
 
   /* Dvorak
@@ -128,10 +129,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_DVORAK] = LAYOUT_kc( \
           1 ,    2 ,    3 ,     4 ,    5 ,  PSCR ,                INS ,   6 ,     7 ,   8 ,    9 ,    0 , \
-       QUOT , COMM ,  DOT ,     P ,    Y , LOWER ,                DEL ,   F ,     G ,   C ,    R ,    L , \
+       QUOT , COMM ,  DOT ,     P ,    Y ,  NLCK ,                DEL ,   F ,     G ,   C ,    R ,    L , \
           A ,    O ,    E ,     U ,    I ,  GESC ,               BSPC ,   D ,     H ,   T ,    N ,    S , \
        SCLN ,    Q ,    J ,     K ,    X ,   TAB , MINS ,  EQL ,  ENT ,   B ,     M ,   W ,    V ,    Z , \
-      LOWER , CAPS , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE , ADJ , SLSH , BSLS \
+       CAPS , XXXX , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE , ADJ , SLSH , BSLS \
       ),
 
   /* Eucalyn (http://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)
@@ -149,10 +150,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_EUCALYN] = LAYOUT_kc( \
           1 ,    2 ,    3 ,     4 ,    5 ,  PSCR ,                INS ,   6 ,     7 ,   8 ,    9 ,    0 , \
-          Q ,    W , COMM ,   DOT , SCLN , LOWER ,                DEL ,   M ,     R ,   D ,    Y ,    P , \
+          Q ,    W , COMM ,   DOT , SCLN ,  NLCK ,                DEL ,   M ,     R ,   D ,    Y ,    P , \
           A ,    O ,    E ,     I ,    U ,  GESC ,               BSPC ,   G ,     T ,   K ,    S ,    N , \
           Z ,    X ,    C ,     V ,    F ,   TAB , MINS ,  EQL ,  ENT ,   B ,     H ,   J ,    L , SLSH , \
-      LOWER , CAPS , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE , ADJ , QUOT , BSLS \
+       CAPS , XXXX , LALT , LOWER , LSFT ,  LCTL , LBRC , RBRC , LGUI , SPC , RAISE , ADJ , QUOT , BSLS \
       ),
 
   /* Keypad
@@ -169,11 +170,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-------------------------------------------------------------------------------------------------'
    */
   [_KEYPAD] = LAYOUT_kc( \
-      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,                XXXX , XXXX , PSLS , PAST , PMNS , XXXX , \
-      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,                NLCK , KP_7 , KP_8 , KP_9 , PPLS , XXXX , \
-      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,                XXXX , KP_4 , KP_5 , KP_6 , PPLS , XXXX , \
-      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,  XXXX , KP_1 , KP_2 , KP_3 , PENT , XXXX , \
-      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , ZERO2 , KP_0 , PDOT ,  ADJ , XXXX , XXXX \
+      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,              QWERTY , XXXX , NLCK , PSLS , PAST , PMNS , \
+      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,                 DEL , NLCK , KP_7 , KP_8 , KP_9 , PPLS , \
+      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,                BSPC , PSLS , KP_4 , KP_5 , KP_6 , PPLS , \
+      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,  PENT , PAST , KP_1 , KP_2 , KP_3 , PENT , \
+      XXXX , XXXX , XXXX , ____ , XXXX , XXXX , XXXX , XXXX , ZERO2 , KP_0 , ____ , PDOT , XXXX , QWERTY \
       ),
 
   /*  AUX modifier key layer
@@ -236,7 +237,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,               XXXX , XXXX , XXXX , XXXX , XXXX ,  F11 , \
       XXXX , UNDS , MINS ,  EQL , PLUS ,  ESC ,               XXXX , DQUO , QUOT , BSLS , PIPE ,  F12 , \
       XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , \
-      XXXX , XXXX , ____ , ____ , ____ , ____ , XXXX , XXXX , ____ , XXXX , XXXX , XXXX , XXXX , XXXX \
+      XXXX , XXXX , ____ , ____ , ____ , ____ , XXXX , XXXX , ____ , XXXX ,  KPM , XXXX , XXXX , XXXX \
       ),
 
   /* Raise
@@ -253,11 +254,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-------------------------------------------------------------------------------------------------'
    */
   [_RAISE] = LAYOUT_kc( \
-      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,               XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , \
-      XXXX , XXXX , XXXX , XXXX , XXXX , XXXX ,               XXXX , XXXX , XXXX , XXXX , XXXX , XXXX , \
-      XXXX , XXXX , XXXX , LBRC , RBRC ,  GRV ,               XXXX , LEFT , DOWN ,   UP , RGHT , XXXX , \
+        F1 ,   F2 ,   F3 ,   F4 ,   F5 , XXXX ,               XXXX ,   F6 ,   F7 ,   F8 ,   F9 ,  F10 , \
+      XXXX , PAUS , XXXX , XXXX , XXXX , XXXX ,               XXXX , XXXX , XXXX , XXXX , XXXX ,  F11 , \
+      XXXX , SLCK , XXXX , LBRC , RBRC ,  GRV ,               XXXX , LEFT , DOWN ,   UP , RGHT ,  F12 , \
       XXXX , XXXX , XXXX , LCBR , RCBR , XXXX , XXXX , XXXX , XXXX , HOME , PGDN , PGUP ,  END , XXXX , \
-      XXXX , XXXX , ____ , XXXX , ____ , ____ , XXXX , XXXX , ____ , XXXX , ____ , XXXX , XXXX , XXXX \
+      XXXX , XXXX , ____ ,  KPM , ____ , ____ , XXXX , XXXX , ____ , XXXX , ____ , XXXX , XXXX , XXXX \
       ),
 
   /* Adjust (Lower + Raise)
